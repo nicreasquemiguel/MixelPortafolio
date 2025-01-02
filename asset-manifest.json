@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MixelPortafolio/static/css/main.0a33f8a0.css",
-    "main.js": "/MixelPortafolio/static/js/main.a42fa9f4.js",
+    "main.css": "/MixelPortafolio/static/css/main.f751b4da.css",
+    "main.js": "/MixelPortafolio/static/js/main.ede5faf6.js",
     "static/media/me.PNG": "/MixelPortafolio/static/media/me.781897988b7deac79192.PNG",
     "static/media/harvard.png": "/MixelPortafolio/static/media/harvard.ca11af56b764c369d67d.png",
     "static/media/uvm.png": "/MixelPortafolio/static/media/uvm.b997ba90921d8895a919.png",
@@ -12,11 +12,11 @@
     "static/media/ibm.png": "/MixelPortafolio/static/media/ibm.eb6ab902f44945c9dd4e.png",
     "static/media/google.png": "/MixelPortafolio/static/media/google.81fdb134397492b14f45.png",
     "index.html": "/MixelPortafolio/index.html",
-    "main.0a33f8a0.css.map": "/MixelPortafolio/static/css/main.0a33f8a0.css.map",
-    "main.a42fa9f4.js.map": "/MixelPortafolio/static/js/main.a42fa9f4.js.map"
+    "main.f751b4da.css.map": "/MixelPortafolio/static/css/main.f751b4da.css.map",
+    "main.ede5faf6.js.map": "/MixelPortafolio/static/js/main.ede5faf6.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a33f8a0.css",
-    "static/js/main.a42fa9f4.js"
+    "static/css/main.f751b4da.css",
+    "static/js/main.ede5faf6.js"
   ]
 }

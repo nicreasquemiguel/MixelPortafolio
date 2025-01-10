@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata')
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  background-color: #222222;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+span,
+.primary-color {
+  background-image: linear-gradient(to right, #dd32f3, #ce90cb);
+  -webkit-background-clip: text;
+  color : transparent;
+}
+
+.bg-primary-color {
+  background-image: linear-gradient(to right, #6b2b72, #a5079d);
+}
+
+.wrapper{
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 500ms;
+}
+
+.inner{
+  overflow: hidden;
+
+}
+
+.opened {
+  grid-template-rows: 1fr;
+}
+
+.skill-icon{
+  @apply  basis-1/4 hover:text-purple-700/70 ;
+}
+
+.nav-link{
+  @apply no-underline text-white;
+}
+
+/* [class*=' flag:'], [class^='flag:'] {
+  font-size: 24px;
+} */

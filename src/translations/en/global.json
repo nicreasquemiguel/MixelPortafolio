@@ -1,0 +1,47 @@
+{
+    "nav":{
+        "home":"Home",
+        "about":"About",
+        "skills":"Skills",
+        "projects":"Projects",
+        "contact":"Contact "
+    },
+    "hero":{
+        "download":"Download CV",
+        "hello":"Hi!",
+        "iam":"I'm ",
+        "working":"and I'm working with..."
+    },
+    "about":{
+        "title": "About ",
+        "paragraph":"Versatile software developer with expertise in Python/Django backend development and a strong understanding of front-end technologies. Also extensive experience in IT support, ensuring smooth operations and troubleshooting technical issues.",
+        "studies":"Studies (2)",
+        "courses":"Courses (5)",
+        "uvm":"University of ",
+        "uvm-dip":"Computing System Engineer (2021)",
+        "udg":"University of  ",
+        "udg-dip":"Computing tech (2015)"
+    },
+    "skills":{
+        "my":"My",
+        "skills":"Skills",
+        "tech":"These are my stronger techs."
+    },
+    "projects":{
+        "my":"My",
+        "projects": "Projects",
+        "latest":"These are my latest projects."
+    },
+    "contact":{
+        "contact":"Contact ",
+        "me": "Me",
+        "work":"Let's work together!",
+        "name":"Full name...",
+        "message":"Message...",
+        "submit":"Enviar"
+    },
+    "studies":{
+        "engineer":"Computing Engineer (2021)",
+        "tech":"Computing Techinian (2015)"
+    }
+}

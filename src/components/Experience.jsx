@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MdWork, MdDateRange, MdLocationOn, MdExpandMore, MdExpandLess } from "react-icons/md";
+import { MdDateRange, MdLocationOn, MdExpandMore, MdExpandLess } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 
 const Experience = () => {

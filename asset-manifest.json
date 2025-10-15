@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/MixelPortafolio/static/css/main.4f4096bb.css",
-    "main.js": "/MixelPortafolio/static/js/main.4a9dee01.js",
+    "main.css": "/MixelPortafolio/static/css/main.81969183.css",
+    "main.js": "/MixelPortafolio/static/js/main.9369cab1.js",
     "static/media/me.PNG": "/MixelPortafolio/static/media/me.781897988b7deac79192.PNG",
+    "static/media/tp-2.png": "/MixelPortafolio/static/media/tp-2.1431d74e8473b765f2ad.png",
+    "static/media/centramed.png": "/MixelPortafolio/static/media/centramed.753f75c3600d0ae0c1f5.png",
     "static/media/harvard.png": "/MixelPortafolio/static/media/harvard.ca11af56b764c369d67d.png",
     "static/media/uvm.png": "/MixelPortafolio/static/media/uvm.b997ba90921d8895a919.png",
     "static/media/udg.png": "/MixelPortafolio/static/media/udg.0bb3cd806b4b8da4df03.png",
-    "static/media/tp-2.png": "/MixelPortafolio/static/media/tp-2.02c8c3aaf91e1766d719.png",
     "static/media/meta.png": "/MixelPortafolio/static/media/meta.b72aa9440c6197d275d4.png",
     "static/media/hero-purple.png": "/MixelPortafolio/static/media/hero-purple.829a0de68b7e11883995.png",
     "static/media/ibm.png": "/MixelPortafolio/static/media/ibm.eb6ab902f44945c9dd4e.png",
     "static/media/google.png": "/MixelPortafolio/static/media/google.81fdb134397492b14f45.png",
     "index.html": "/MixelPortafolio/index.html",
-    "main.4f4096bb.css.map": "/MixelPortafolio/static/css/main.4f4096bb.css.map",
-    "main.4a9dee01.js.map": "/MixelPortafolio/static/js/main.4a9dee01.js.map"
+    "main.81969183.css.map": "/MixelPortafolio/static/css/main.81969183.css.map",
+    "main.9369cab1.js.map": "/MixelPortafolio/static/js/main.9369cab1.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f4096bb.css",
-    "static/js/main.4a9dee01.js"
+    "static/css/main.81969183.css",
+    "static/js/main.9369cab1.js"
   ]
 }

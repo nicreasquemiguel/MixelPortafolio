@@ -4,10 +4,8 @@ import ibm from '../../assets/logos/ibm.png'
 import meta from '../../assets/logos/meta.png'
 import google from '../../assets/logos/google.png'
 import ListCard from './ListCard'
-import { useTranslation } from 'react-i18next'
 
 const Courses = () => {
-  const {t, i18n} = useTranslation("global")
   return (
     <>
     

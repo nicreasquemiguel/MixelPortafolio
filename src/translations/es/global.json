@@ -43,5 +43,19 @@
     "studies":{
         "engineer":"Ingenieria de Sistemas (2021)",
         "tech":"Técnica en Informatica (2015)"
+    },
+    "experience":{
+        "work":"Experiencia",
+        "experience":"Laboral",
+        "journey":"Mi trayectoria profesional e historial laboral",
+        "responsibilities":"Responsabilidades Clave",
+        "fulltime":"Tiempo Completo",
+        "selfemployed":"Autónomo",
+        "temporary":"Temporal",
+        "internship":"Pasantía"
+    },
+    "buttons":{
+        "viewlive":"Ver Sitio",
+        "github":"GitHub"
     }
 }

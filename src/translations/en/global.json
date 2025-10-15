@@ -43,5 +43,19 @@
     "studies":{
         "engineer":"Computing Engineer (2021)",
         "tech":"Computing Techinian (2015)"
+    },
+    "experience":{
+        "work":"Work",
+        "experience":"Experience",
+        "journey":"My professional journey and career history",
+        "responsibilities":"Key Responsibilities",
+        "fulltime":"Full Time",
+        "selfemployed":"Self-Employed",
+        "temporary":"Temporary",
+        "internship":"Internship"
+    },
+    "buttons":{
+        "viewlive":"View Live",
+        "github":"GitHub"
     }
 }

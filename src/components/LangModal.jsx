@@ -3,7 +3,7 @@ import Modal from './Modal'
 import { useTranslation } from 'react-i18next'
 
 const LangModal = ({open = true, setOpen}) => {
-    const {t, i18n} = useTranslation("global")
+    const {i18n} = useTranslation("global")
 
     const handleChangeLanguage = (lang) => {
         i18n.changeLanguage(lang)

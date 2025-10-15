@@ -5,7 +5,7 @@ import ListCard from './ListCard'
 import { useTranslation } from 'react-i18next'
 
 const Studies = () => {
-    const {t, i18n} = useTranslation("global")
+    const {t} = useTranslation("global")
   return (
     <>
 

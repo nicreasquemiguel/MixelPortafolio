@@ -10,56 +10,55 @@ import 'react-tooltip/dist/react-tooltip.css'
 import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
-  const {t, i18n} = useTranslation("global")
+  const {t} = useTranslation("global")
   return (
-    <div id="skills" className="w-full flex flex-wrap text-center px-3 mt-4 md:mx-0 ">
-        <div className='flex flex-col ml-5 text-left w-full self-center basis-5/5 items-left md:items-center '>
-            <h2 className='text-2xl m-0 lg:text-3xl text-white'>
-              {t("skills.my")} <span >{t("skills.skills")} </span>
+    <div id="skills" className="px-6 py-12 mx-auto max-w-7xl">
+        <div className='flex flex-col justify-center items-center mb-12 text-center'>
+            <h2 className='m-0 mb-2 text-3xl font-bold text-white lg:text-4xl'>
+              {t("skills.my")} <span className='text-purple-500'>{t("skills.skills")}</span>
             </h2>
-            <p className='text-gray-500'>
+            <p className='text-base text-gray-400 md:text-lg'>
                 {t("skills.tech")}
             </p>
         </div>
-        <div className="w-3/4 md:w-1/2 max-w-[1000px] mx-5 md:mx-auto  flex flex-row flex-wrap  gap-y-10  text-white font-xl text-5xl justify-items-center">
+        <div className="flex flex-wrap gap-8 justify-center items-center mx-auto max-w-4xl md:gap-12">
     
-            <IoLogoPython data-tooltip-id="python" data-tooltip-content="Python" title="Python"  className="skill-icon " />
+            <IoLogoPython data-tooltip-id="python" data-tooltip-content="Python" title="Python" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="python" />
 
-            <IoLogoJavascript  data-tooltip-id="javascript" data-tooltip-content="Javascript" title="Javascript"  className="skill-icon "  />
+            <IoLogoJavascript data-tooltip-id="javascript" data-tooltip-content="Javascript" title="Javascript" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="javascript" />
  
-            <IoLogoHtml5  data-tooltip-id="HTML" data-tooltip-content="HTML" title="HTML"   className="skill-icon "  />
+            <IoLogoHtml5 data-tooltip-id="HTML" data-tooltip-content="HTML" title="HTML" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="HTML" />
 
-            <IoLogoCss3  data-tooltip-id="CSS" data-tooltip-content="CSS" title="CSS"    className="skill-icon " />
+            <IoLogoCss3 data-tooltip-id="CSS" data-tooltip-content="CSS" title="CSS" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="CSS" />
 
-            <SiDjango  data-tooltip-id="Django" data-tooltip-content="Django" title="Django"    className="skill-icon" />
+            <SiDjango data-tooltip-id="Django" data-tooltip-content="Django" title="Django" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="Django" />
 
-            <AiOutlineConsoleSql  data-tooltip-id="SQL" data-tooltip-content="SQL" title="SQL"    className="skill-icon" />
+            <AiOutlineConsoleSql data-tooltip-id="SQL" data-tooltip-content="SQL" title="SQL" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="SQL" />
 
-            <SiTailwindcss   data-tooltip-id="Tailwind" data-tooltip-content="Tailwind" title="Tailwind"   className="skill-icon" />
+            <SiTailwindcss data-tooltip-id="Tailwind" data-tooltip-content="Tailwind" title="Tailwind" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="Tailwind" />  
 
-            <IoLogoGithub  data-tooltip-id="Github" data-tooltip-content="Github" title="Github"   className="skill-icon"  />
+            <IoLogoGithub data-tooltip-id="Github" data-tooltip-content="Github" title="Github" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="Github" />
 
-            <HiComputerDesktop  data-tooltip-id="PC" data-tooltip-content="PC" title="PC"    className="skill-icon" />
+            <HiComputerDesktop data-tooltip-id="PC" data-tooltip-content="PC Support" title="PC Support" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="PC" />   
 
-            <MdNetworkWifi3Bar data-tooltip-id="Network" data-tooltip-content="General Network" title="Network"    className="skill-icon" />
+            <MdNetworkWifi3Bar data-tooltip-id="Network" data-tooltip-content="Network Administration" title="Network Administration" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="Network" />  
 
-            <MdOutlineSecurity  data-tooltip-id="security" data-tooltip-content="Security" title="Security"   className="skill-icon" />
+            <MdOutlineSecurity data-tooltip-id="security" data-tooltip-content="Security" title="Security" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="security" /> 
 
-            <BiSupport  data-tooltip-id="support" data-tooltip-content="IT Support" title="IT Support"     className="skill-icon"  />
+            <BiSupport data-tooltip-id="support" data-tooltip-content="IT Support" title="IT Support" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
             <Tooltip id="support" /> 
         </div>
-
     </div>
   )
 }

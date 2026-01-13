@@ -45,7 +45,7 @@ const Hero = () => {
           </h1>
 
           <div className="flex gap-16 justify-start my-7 text-5xl text-purple-600">
-            <a className="text-white" href="https://www.linkedin.com/in/mixel/"><AiFillLinkedin /></a>
+            {/* <a className="text-white" href="https://www.linkedin.com/in/mixel/"><AiFillLinkedin /></a> */}
             <a className="text-white" href="https://github.com/nicreasquemiguel"><AiFillGithub /></a>
             <a className="text-white" href="https://www.instagram.com/mixeldev"><AiFillInstagram /></a>
           </div>
@@ -54,13 +54,13 @@ const Hero = () => {
                  from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 
                  group-hover:-inset-1 group-hover:duration-200">
             </div>
-            <a href={currentCvLink}
+            {/* <a href={currentCvLink}
               title="Download CV"
               role="button"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex relative justify-center items-center px-6 py-3 text-base font-bold text-white no-underline bg-purple-600 rounded-xl transition-all duration-300 md:px-8 md:py-4 md:text-lg hover:bg-purple-700 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">{t("hero.download")}
-            </a>
+            </a> */}
           </div>
         </div>
 

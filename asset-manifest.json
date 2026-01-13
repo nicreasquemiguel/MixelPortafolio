@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MixelPortafolio/static/css/main.81969183.css",
-    "main.js": "/MixelPortafolio/static/js/main.9369cab1.js",
+    "main.js": "/MixelPortafolio/static/js/main.90819739.js",
     "static/media/me.PNG": "/MixelPortafolio/static/media/me.781897988b7deac79192.PNG",
     "static/media/tp-2.png": "/MixelPortafolio/static/media/tp-2.1431d74e8473b765f2ad.png",
     "static/media/centramed.png": "/MixelPortafolio/static/media/centramed.753f75c3600d0ae0c1f5.png",
@@ -14,10 +14,10 @@
     "static/media/google.png": "/MixelPortafolio/static/media/google.81fdb134397492b14f45.png",
     "index.html": "/MixelPortafolio/index.html",
     "main.81969183.css.map": "/MixelPortafolio/static/css/main.81969183.css.map",
-    "main.9369cab1.js.map": "/MixelPortafolio/static/js/main.9369cab1.js.map"
+    "main.90819739.js.map": "/MixelPortafolio/static/js/main.90819739.js.map"
   },
   "entrypoints": [
     "static/css/main.81969183.css",
-    "static/js/main.9369cab1.js"
+    "static/js/main.90819739.js"
   ]
 }

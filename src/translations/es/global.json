@@ -1,61 +1,61 @@
 {
-    "nav":{
-        "home":"Inicio",
-        "about":"Sobre",
-        "skills":"Habilidades",
-        "projects":"Proyectos",
-        "contact":"Contacto "
-    },
-    "hero":{
-        "download":"Descargar CV",
-        "hello":"Hola! ",
-        "working":"trabajo lo siguiente...",
-        "iam":"Soy "
-    },
-    "about":{
-        "title": "Sobre ",
-         "paragraph":"Desarrollador de software versátil con experiencia en el desarrollo backend de Python/Django y un sólido conocimiento de las tecnologías front-end.  También una amplia experiencia en soporte de TI, lo que garantiza operaciones fluidas y resolución de problemas técnicos.",
-         "studies":"Estudios (2)",
-         "courses":"Cursos (5)",
-         "uvm":"Universidad del ",
-         "uvm-dip":"Ingenieria de Sistemas (2021)",
-         "udg":"Universidad del ",
-         "udg-dip":"Técnica en Informatica (2015)"
-    },
-    "skills":{
-        "my":"Mis",
-        "skills":"Habilidades",
-        "tech":"Mis techs más fuertes."
-    },
-    "projects":{
-        "my":"Mis",
+    "nav": {
+        "home": "Inicio",
+        "about": "Sobre",
+        "skills": "Habilidades",
         "projects": "Proyectos",
-        "latest":"Estos son mis ultimos proyectos."
+        "contact": "Contacto "
     },
-    "contact":{
-        "contact":"Comunicate ",
+    "hero": {
+        "download": "Descargar CV",
+        "hello": "Hola! ",
+        "working": "trabajo lo siguiente...",
+        "iam": "Soy "
+    },
+    "about": {
+        "title": "Sobre ",
+        "paragraph": "Desarrollador de software versátil con experiencia en el desarrollo backend de Python/Django y un sólido conocimiento de las tecnologías front-end.  También una amplia experiencia en soporte de TI, lo que garantiza operaciones fluidas y resolución de problemas técnicos. Finalmente, una muy buena experiencia en diseño y contenido digital.",
+        "studies": "Estudios (2)",
+        "courses": "Cursos (5)",
+        "uvm": "Universidad del ",
+        "uvm-dip": "Ingenieria de Sistemas (2021)",
+        "udg": "Universidad del ",
+        "udg-dip": "Técnica en Informatica (2015)"
+    },
+    "skills": {
+        "my": "Mis",
+        "skills": "Habilidades",
+        "tech": "Mis techs más fuertes."
+    },
+    "projects": {
+        "my": "Mis",
+        "projects": "Proyectos",
+        "latest": "Estos son mis ultimos proyectos."
+    },
+    "contact": {
+        "contact": "Comunicate ",
         "me": "conmingo",
-        "work":"¡Trabajemos juntos!",
-        "name":"Nombre completo...",
-        "message":"Mensaje...",
-        "submit":"Enviar"
+        "work": "¡Trabajemos juntos!",
+        "name": "Nombre completo...",
+        "message": "Mensaje...",
+        "submit": "Enviar"
     },
-    "studies":{
-        "engineer":"Ingenieria de Sistemas (2021)",
-        "tech":"Técnica en Informatica (2015)"
+    "studies": {
+        "engineer": "Ingenieria de Sistemas (2021)",
+        "tech": "Técnica en Informatica (2015)"
     },
-    "experience":{
-        "work":"Experiencia",
-        "experience":"Laboral",
-        "journey":"Mi trayectoria profesional e historial laboral",
-        "responsibilities":"Responsabilidades Clave",
-        "fulltime":"Tiempo Completo",
-        "selfemployed":"Autónomo",
-        "temporary":"Temporal",
-        "internship":"Pasantía"
+    "experience": {
+        "work": "Experiencia",
+        "experience": "Laboral",
+        "journey": "Mi trayectoria profesional e historial laboral",
+        "responsibilities": "Responsabilidades Clave",
+        "fulltime": "Tiempo Completo",
+        "selfemployed": "Autónomo",
+        "temporary": "Temporal",
+        "internship": "Pasantía"
     },
-    "buttons":{
-        "viewlive":"Ver Sitio",
-        "github":"GitHub"
+    "buttons": {
+        "viewlive": "Ver Sitio",
+        "github": "GitHub"
     }
 }

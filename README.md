@@ -1,4 +1,4 @@
-# Mixel/ Miguel Pineda's Portafolio
+# Mixel Portafolio
 
 Created in ReactJS
 

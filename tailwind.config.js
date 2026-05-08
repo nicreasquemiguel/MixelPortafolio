@@ -13,7 +13,7 @@ module.exports = {
   },
   extend: {
       boxShadow:{
-        neon: "0 0 10px theme(colors.purple.700)"
+        neon: "0 0 10px theme(colors.red.700)"
       }
     },
   

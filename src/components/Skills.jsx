@@ -1,64 +1,105 @@
-import React from 'react'
 import { IoLogoPython, IoLogoGithub, IoLogoJavascript, IoLogoHtml5, IoLogoCss3 } from 'react-icons/io'
-import { SiDjango, SiTailwindcss } from "react-icons/si";
-import { AiOutlineConsoleSql } from "react-icons/ai";
+import { SiDjango, SiTailwindcss, SiFastapi, SiDocker, SiReact } from "react-icons/si";
 import { HiComputerDesktop } from "react-icons/hi2";
 import { MdNetworkWifi3Bar, MdOutlineSecurity } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
+import { FaAws, FaDatabase } from "react-icons/fa";
+import { TbApi, TbHierarchy } from "react-icons/tb";
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import { useTranslation } from 'react-i18next';
 
+const groups = [
+  {
+    label: "Backend",
+    skills: [
+      { id: "python",    icon: IoLogoPython,  label: "Python",       strong: true },
+      { id: "django",    icon: SiDjango,      label: "Django",       strong: true },
+      { id: "fastapi",   icon: SiFastapi,     label: "FastAPI",      strong: true },
+      { id: "apis",      icon: TbApi,         label: "REST APIs",    strong: true },
+      { id: "microsvcs", icon: TbHierarchy,   label: "Microservices",strong: true },
+      { id: "databases", icon: FaDatabase,    label: "Databases",    strong: true },
+    ]
+  },
+  {
+    label: "Frontend",
+    skills: [
+      { id: "html",       icon: IoLogoHtml5,     label: "HTML" },
+      { id: "css",        icon: IoLogoCss3,      label: "CSS" },
+      { id: "javascript", icon: IoLogoJavascript,label: "JavaScript" },
+      { id: "react",      icon: SiReact,         label: "React" },
+      { id: "tailwind",   icon: SiTailwindcss,   label: "Tailwind CSS" },
+    ]
+  },
+  {
+    label: "DevOps & Cloud",
+    skills: [
+      { id: "docker",  icon: SiDocker,     label: "Docker" },
+      { id: "aws",     icon: FaAws,        label: "AWS" },
+      { id: "github",  icon: IoLogoGithub, label: "GitHub" },
+    ]
+  },
+  {
+    label: "IT & Support",
+    skills: [
+      { id: "pc",       icon: HiComputerDesktop, label: "PC Support" },
+      { id: "network",  icon: MdNetworkWifi3Bar, label: "Networking" },
+      { id: "security", icon: MdOutlineSecurity, label: "Security" },
+      { id: "support",  icon: BiSupport,         label: "IT Support" },
+    ]
+  },
+]
+
+const SkillChip = ({ id, icon: Icon, label, strong }) => (
+  <div
+    data-tooltip-id={id}
+    data-tooltip-content={label}
+    className={`relative flex flex-col items-center justify-center gap-2 p-4 cursor-default group rounded-lg border transition-colors duration-150
+      ${strong
+        ? 'bg-red-500/[0.06] border-red-500/20 hover:border-red-500/40'
+        : 'bg-[#252525] border-white/[0.08] hover:border-red-500/30'
+      }`}
+  >
+    {strong && (
+      <span className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 text-[8px] font-semibold uppercase tracking-wider text-red-400 bg-[#1e1e1e] border border-red-500/30 rounded-full whitespace-nowrap">
+        strongest
+      </span>
+    )}
+    <Icon className={`text-3xl transition-colors duration-150 ${strong ? 'text-red-400/70 group-hover:text-red-400' : 'text-white/60 group-hover:text-red-400'}`} />
+    <span className="text-[10px] text-white/30 group-hover:text-white/60 transition-colors duration-150 text-center leading-tight">
+      {label}
+    </span>
+    <Tooltip id={id} />
+  </div>
+)
+
 const Skills = () => {
-  const {t} = useTranslation("global")
+  const { t } = useTranslation("global")
   return (
-    <div id="skills" className="px-6 py-12 mx-auto max-w-7xl">
-        <div className='flex flex-col justify-center items-center mb-12 text-center'>
-            <h2 className='m-0 mb-2 text-3xl font-bold text-white lg:text-4xl'>
-              {t("skills.my")} <span className='text-purple-500'>{t("skills.skills")}</span>
-            </h2>
-            <p className='text-base text-gray-400 md:text-lg'>
-                {t("skills.tech")}
+    <div id="skills" className="px-6 py-16 mx-auto max-w-7xl">
+
+      <p className='mb-2 text-[10px] font-medium text-white/30 uppercase tracking-[0.2em]'>skills — frame</p>
+      <div className="figma-frame p-6 md:p-8 space-y-8">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em]">
+            {t("skills.my")} {t("skills.skills")}
+          </span>
+          <div className="flex-1 h-px bg-white/[0.06]"></div>
+        </div>
+
+        {groups.map((group) => (
+          <div key={group.label}>
+            <p className="text-[10px] font-medium text-white/25 uppercase tracking-[0.2em] mb-4">
+              {group.label}
             </p>
-        </div>
-        <div className="flex flex-wrap gap-8 justify-center items-center mx-auto max-w-4xl md:gap-12">
-    
-            <IoLogoPython data-tooltip-id="python" data-tooltip-content="Python" title="Python" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="python" />
-
-            <IoLogoJavascript data-tooltip-id="javascript" data-tooltip-content="Javascript" title="Javascript" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="javascript" />
- 
-            <IoLogoHtml5 data-tooltip-id="HTML" data-tooltip-content="HTML" title="HTML" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="HTML" />
-
-            <IoLogoCss3 data-tooltip-id="CSS" data-tooltip-content="CSS" title="CSS" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="CSS" />
-
-            <SiDjango data-tooltip-id="Django" data-tooltip-content="Django" title="Django" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="Django" />
-
-            <AiOutlineConsoleSql data-tooltip-id="SQL" data-tooltip-content="SQL" title="SQL" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="SQL" />
-
-            <SiTailwindcss data-tooltip-id="Tailwind" data-tooltip-content="Tailwind" title="Tailwind" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="Tailwind" />  
-
-            <IoLogoGithub data-tooltip-id="Github" data-tooltip-content="Github" title="Github" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="Github" />
-
-            <HiComputerDesktop data-tooltip-id="PC" data-tooltip-content="PC Support" title="PC Support" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="PC" />   
-
-            <MdNetworkWifi3Bar data-tooltip-id="Network" data-tooltip-content="Network Administration" title="Network Administration" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="Network" />  
-
-            <MdOutlineSecurity data-tooltip-id="security" data-tooltip-content="Security" title="Security" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="security" /> 
-
-            <BiSupport data-tooltip-id="support" data-tooltip-content="IT Support" title="IT Support" className="text-6xl text-white transition-all duration-300 cursor-pointer md:text-7xl hover:text-purple-500 hover:scale-125 hover:-translate-y-2" />
-            <Tooltip id="support" /> 
-        </div>
+            <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+              {group.skills.map((skill) => (
+                <SkillChip key={skill.id} {...skill} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

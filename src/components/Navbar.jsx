@@ -1,4 +1,4 @@
-import React, {useState , useRef, useEffect } from 'react'
+import {useState , useRef, useEffect } from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import LangModal from './LangModal'
 import { US, MX } from 'country-flag-icons/react/3x2'
@@ -7,65 +7,88 @@ import { useTranslation } from 'react-i18next'
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const [open, setOpen] = useState(true)
-    
+
     const ref = useRef()
     const {t, i18n} = useTranslation("global")
 
-    const callbackOpen = () => {
-        setOpen(false)
-    }
-    
-    const handleNav = () =>{
-        setNav(!nav)
-    }
+    const callbackOpen = () => setOpen(false)
+    const closeNav = () => setNav(false)
 
     useEffect(()=>{
         let handler = (e) =>{
-            if(!ref.current.contains(e.target)){
+            if(ref.current && !ref.current.contains(e.target)){
                 setNav(false)
-            }}
-
-            document.addEventListener("mousedown", handler)
-        return()=>{
-            document.removeEventListener("mousedown", handler)
+            }
         }
+        document.addEventListener("mousedown", handler)
+        return()=>{ document.removeEventListener("mousedown", handler) }
     })
 
   return (
+    <>
+      <LangModal open={open} setOpen={callbackOpen}/>
 
+      {/* Backdrop */}
+      {nav && (
+        <div
+          onClick={closeNav}
+          className="fixed inset-0 z-[55] bg-black/50 backdrop-blur-sm"
+        />
+      )}
 
-    <div className='text-gray-300 flex justify-between items-center max-w-[1240px] mx-auto h-10 mt-2 px-4 text-l'>
-        <LangModal  open={open} setOpen={callbackOpen}/> 
-        <h1 className='ml-4 w-full text-3xl font-bold primary-color'>MIXEL</h1>
-        <ul className='hidden font-bold list-none text-gray-300 md:flex'>
-            <li  className='p-2'><a className='nav-link' href='#home'>{t("nav.home")}</a></li>
-            <li className='p-2'><a className='nav-link'  href='#about'>{t("nav.about")}</a> </li>
-            <li className='p-2'><a className='nav-link'  href='#skills'>{t("nav.skills")}</a></li>
-            <li className='p-2'><a className='nav-link'  href='#experience'>Experience</a></li>
-            <li className='p-2'><a className='nav-link'  href='#projects'>{t("nav.projects")}</a></li>
-            <li className='p-2'><a className='nav-link'  href='#contact'>{t("nav.contact")}</a></li>
-            <li className='p-2'><button onClick={()=>setOpen(true)} className=' h-auto p-auto w-[28px] text-black ' >{i18n.language === 'en' ? <US/>: <MX/> }</button></li>
-        </ul>
-        <div onClick={handleNav} className='block md:hidden'>
-            {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>}
-        </div>
+      {/* Mobile drawer */}
+      <div
+        ref={ref}
+        style={{ height: '100dvh' }}
+        className={`fixed top-0 left-0 w-[75%] max-w-xs z-[60] flex flex-col overflow-y-auto transition-transform duration-300 bg-[#1a1a1a]/90 backdrop-blur-xl border-r border-white/[0.08]
+          ${nav ? 'translate-x-0' : '-translate-x-full'}`}
+      >
+          <div className="flex items-center justify-between px-5 h-14 border-b border-white/[0.06]">
+            <h1 className='text-base font-bold tracking-wider primary-color'>MIXEL</h1>
+            <button onClick={closeNav} className="text-white/50 hover:text-white bg-transparent border-none cursor-pointer">
+              <AiOutlineClose size={18}/>
+            </button>
+          </div>
 
-        <div ref={ref} className= {nav 
-         ? 'text-gray-300 fixed h-full left-0 top-0 w-[60%] border-r border-r-gray-900 bg-[#202121] ease-in-out duration-500'
-         : 'fixed left-[-100%]'}>
-            <h1 className='m-4 text-3xl primary-color'>MIXEL</h1>
-            <ul className='p-8 text-2xl list-none'>
-            <li  className='p-2'><a className='nav-link' href='#home'>{t("nav.home")}</a></li>
-            <li className='p-2'><a className='nav-link'  href='#about'>{t("nav.about")}</a> </li>
-            <li className='p-2'><a className='nav-link'  href='#skills'>{t("nav.skills")}</a></li>
-            <li className='p-2'><a className='nav-link'  href='#experience'>Experience</a></li>
-            <li className='p-2'><a className='nav-link'  href='#projects'>{t("nav.projects")}</a></li>
-            <li className='p-2'><a className='nav-link'  href='#contact'>{t("nav.contact")}</a></li>
-                <li onClick={()=>setNav(!nav)} className='p-2'><button onClick={()=>setOpen(true)} className='p-auto w-[50px] text-black h-auto' >{i18n.language === 'en' ? <US/>: <MX/> }</button></li>
+          <ul className='px-4 py-4 text-base list-none space-y-1 flex-1'>
+              <li><a onClick={closeNav} className='nav-link block px-3 py-2.5 rounded hover:bg-white/[0.06]' href='#home'>{t("nav.home")}</a></li>
+              <li><a onClick={closeNav} className='nav-link block px-3 py-2.5 rounded hover:bg-white/[0.06]' href='#about'>{t("nav.about")}</a></li>
+              <li><a onClick={closeNav} className='nav-link block px-3 py-2.5 rounded hover:bg-white/[0.06]' href='#skills'>{t("nav.skills")}</a></li>
+              <li><a onClick={closeNav} className='nav-link block px-3 py-2.5 rounded hover:bg-white/[0.06]' href='#experience'>Experience</a></li>
+              <li><a onClick={closeNav} className='nav-link block px-3 py-2.5 rounded hover:bg-white/[0.06]' href='#projects'>{t("nav.projects")}</a></li>
+              <li><a onClick={closeNav} className='nav-link block px-3 py-2.5 rounded hover:bg-white/[0.06]' href='#contact'>{t("nav.contact")}</a></li>
+          </ul>
 
-            </ul>
-        </div>
-    </div>
+          <div className='px-5 py-4 border-t border-white/[0.06]'>
+            <button onClick={()=>{ setOpen(true); closeNav() }} className='w-10 h-auto text-white bg-transparent border-none cursor-pointer'>
+                {i18n.language === 'en' ? <US/> : <MX/>}
+            </button>
+          </div>
+      </div>
+
+      {/* Top navbar */}
+      <div className='fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-12 px-5 bg-[#1e1e1e]/95 backdrop-blur-md border-b border-white/[0.08]'>
+          <h1 className='text-base font-bold tracking-wider primary-color'>MIXEL</h1>
+
+          <ul className='hidden list-none gap-1 md:flex items-center'>
+              <li><a className='nav-link text-sm px-3 py-1.5 rounded hover:bg-white/[0.06]' href='#home'>{t("nav.home")}</a></li>
+              <li><a className='nav-link text-sm px-3 py-1.5 rounded hover:bg-white/[0.06]' href='#about'>{t("nav.about")}</a></li>
+              <li><a className='nav-link text-sm px-3 py-1.5 rounded hover:bg-white/[0.06]' href='#skills'>{t("nav.skills")}</a></li>
+              <li><a className='nav-link text-sm px-3 py-1.5 rounded hover:bg-white/[0.06]' href='#experience'>Experience</a></li>
+              <li><a className='nav-link text-sm px-3 py-1.5 rounded hover:bg-white/[0.06]' href='#projects'>{t("nav.projects")}</a></li>
+              <li><a className='nav-link text-sm px-3 py-1.5 rounded hover:bg-white/[0.06]' href='#contact'>{t("nav.contact")}</a></li>
+              <li className='ml-2 pl-2 border-l border-white/[0.1]'>
+                  <button onClick={()=>setOpen(true)} className='w-7 h-auto text-white bg-transparent border-none cursor-pointer'>
+                      {i18n.language === 'en' ? <US/> : <MX/>}
+                  </button>
+              </li>
+          </ul>
+
+          <button onClick={()=>setNav(true)} className='block md:hidden cursor-pointer text-white/70 bg-transparent border-none'>
+              <AiOutlineMenu size={18}/>
+          </button>
+      </div>
+    </>
   )
 }
 

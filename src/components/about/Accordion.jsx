@@ -8,7 +8,7 @@ const Accordion = ({ title, answer, icon }) => {
     <div className="">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
-        className="flex justify-between w-full bg-[#333333]/50 hover:b-[#333333]/20 border-none rounded-xl h-[40px] items-center p-6"
+        className="flex justify-between w-full bg-slate-900/50 hover:bg-slate-900/20 border-none rounded-xl h-[40px] items-center p-6"
       >
         <div className="gap-6 flex grid-cols-2 	 items-center">
         <span className="">{icon}</span>
@@ -18,13 +18,13 @@ const Accordion = ({ title, answer, icon }) => {
 
       </button>
       <div
-        className={`grid overflow-hidden transition-all  bg-[#333333]/50 rounded-xl duration-300 ease-in-out text-slate-600 text-sm ${
+        className={`overflow-hidden transition-all bg-[#333333]/50 rounded-xl duration-300 ease-in-out text-slate-600 text-sm ${
           accordionOpen
-            ? "grid-rows-[1fr] opacity-100"
-            : "grid-rows-[0fr] opacity-0"
+            ? 'max-h-[1200px] opacity-100'
+            : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="overflow-hidden">{answer}</div>
+        <div className="p-4">{answer}</div>
       </div>
     </div>
   );

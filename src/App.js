@@ -6,6 +6,7 @@ import About from "./components/About";
 import Work from "./components/Work";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import GitHubActivity from './components/GitHubActivity';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
 
@@ -13,11 +14,12 @@ import Footer from './components/Footer';
 function App() {
 
   return (
-    <div >
+    <div className="pt-12">
       <Navbar/>
       <Hero/>
       <About/>
       <Skills/>
+      <GitHubActivity/>
       <Experience/>
       <Work/>
 

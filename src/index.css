@@ -1,51 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   margin: 0;
-  background-color: #222222;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
+  background-color: #1e1e1e;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.11) 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #ffffff;
 }
 
-span,
 .primary-color {
-  background-image: linear-gradient(to right, #dd32f3, #ce90cb);
+  background-image: linear-gradient(to right, #ef4444, #b91c1c);
   -webkit-background-clip: text;
-  color : transparent;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .bg-primary-color {
-  background-image: linear-gradient(to right, #6b2b72, #a5079d);
+  background-image: linear-gradient(to right, #d20000, #590909);
 }
 
-.wrapper{
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 500ms;
+/* Figma frame card */
+.figma-frame {
+  background-color: #252525;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+.figma-frame:hover {
+  border-color: rgba(239,68,68,0.3);
 }
 
-.inner{
-  overflow: hidden;
-
+.nav-link {
+  @apply no-underline text-white/70 hover:text-white transition-colors duration-150;
 }
 
-.opened {
-  grid-template-rows: 1fr;
+.skill-icon {
+  @apply basis-1/4 hover:text-red-500;
 }
-
-.skill-icon{
-  @apply  basis-1/4 hover:text-purple-700/70 ;
-}
-
-.nav-link{
-  @apply no-underline text-white;
-}
-
-/* [class*=' flag:'], [class^='flag:'] {
-  font-size: 24px;
-} */

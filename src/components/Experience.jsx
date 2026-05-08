@@ -4,19 +4,15 @@ import { useTranslation } from 'react-i18next';
 
 const Experience = () => {
     const {t} = useTranslation("global")
-    const [expandedCards, setExpandedCards] = useState([0]) // First card open by default
-    
+    const [expandedCards, setExpandedCards] = useState([0])
+
     const toggleCard = (index) => {
-        // Keep first card always open
         if (index === 0) return
-        
-        setExpandedCards(prev => 
-            prev.includes(index) 
-                ? prev.filter(i => i !== index)
-                : [...prev, index]
+        setExpandedCards(prev =>
+            prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
         )
     }
-    
+
     const getTranslatedType = (type) => {
         const typeMap = {
             'Full Time': t("experience.fulltime"),
@@ -26,7 +22,7 @@ const Experience = () => {
         }
         return typeMap[type] || type
     }
-    
+
     const experiences = [
         {
             title: "Backend Developer",
@@ -35,11 +31,7 @@ const Experience = () => {
             period: "Mar 2025 - Present",
             location: "Guadalajara, Jalisco, México",
             description: "Backend Development for an administrative medical management web app with FHIR/HL7/HIPAA standards.",
-            responsibilities: [
-                "Django Microservices",
-                "FastAPI Gateway",
-                "Chatbot with AI and call Integration"
-            ],
+            responsibilities: ["Django Microservices", "FastAPI Gateway", "Chatbot with AI and call Integration"],
             current: true
         },
         {
@@ -49,11 +41,7 @@ const Experience = () => {
             period: "2022 - Present",
             location: "Guadalajara, Jalisco, México",
             description: "Event management and business administration.",
-            responsibilities: [
-                "Business Management",
-                "Web Development",
-                "Event Planning"
-            ],
+            responsibilities: ["Business Management", "Web Development", "Event Planning"],
             current: true
         },
         {
@@ -63,10 +51,7 @@ const Experience = () => {
             period: "Jan 2021 - Oct 2021",
             location: "Guadalajara, Jalisco, México",
             description: "Software development and database management for hospital systems.",
-            responsibilities: [
-                "Junior Programmer",
-                "Database Administrator"
-            ],
+            responsibilities: ["Junior Programmer", "Database Administrator"],
             current: false
         },
         {
@@ -76,139 +61,102 @@ const Experience = () => {
             period: "2020",
             location: "Zapopan, Jalisco, México",
             description: "Web development and database management for public library systems.",
-            responsibilities: [
-                "Database Administrator",
-                "Website Administrator",
-                "Marketing Assistant"
-            ],
+            responsibilities: ["Database Administrator", "Website Administrator", "Marketing Assistant"],
             current: false
         }
     ];
 
     return (
-        <div id="experience" className='px-2 py-12 mx-auto max-w-7xl sm:px-4 md:px-6'>
-            <div className='flex flex-col justify-center items-center mb-8 text-center md:mb-12'>
-                <h2 className='m-0 mb-2 text-3xl font-bold text-white lg:text-4xl'>
-                    {t("experience.work")} <span className='text-purple-500'>{t("experience.experience")}</span>
-                </h2>
-                <p className='text-sm text-gray-400 md:text-base lg:text-lg'>
-                    {t("experience.journey")}
-                </p>
-            </div>
+        <div id="experience" className='px-6 py-16 mx-auto max-w-7xl'>
 
-            <div className="relative mx-auto max-w-5xl">
-                {/* Vertical Timeline Line */}
-                <div className="absolute left-0.5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-purple-500/50 to-transparent sm:left-1 md:left-12"></div>
+            <p className='mb-2 text-[10px] font-medium text-white/30 uppercase tracking-[0.2em]'>experience — frame</p>
+            <div className="figma-frame p-6 md:p-8">
+                <div className="flex items-center gap-2 mb-8">
+                    <span className="text-xs font-semibold text-white/50 uppercase tracking-[0.15em]">
+                        {t("experience.work")} {t("experience.experience")}
+                    </span>
+                    <div className="flex-1 h-px bg-white/[0.06]"></div>
+                </div>
 
-                <div className="space-y-3 sm:space-y-4 md:space-y-8">
+                <div className="space-y-3">
                     {experiences.map((exp, index) => {
                         const isExpanded = expandedCards.includes(index)
                         return (
-                        <div key={index} className="relative pl-4 sm:pl-6 md:pl-24">
-                            {/* Content Card */}
-                            <div className={`group relative p-3 sm:p-4 md:p-6 rounded-lg md:rounded-xl shadow-lg transition-all duration-300 overflow-hidden ${
-                                isExpanded 
-                                    ? 'bg-gradient-to-br from-[#232325] to-[#2a2a2c] hover:shadow-2xl hover:shadow-purple-500/20' 
-                                    : 'bg-[#232325] hover:shadow-xl hover:shadow-purple-500/10'
-                            }`}>
-                                {/* Card Header - Always Visible */}
-                                <div 
+                            <div key={index} className="figma-frame p-4 md:p-5 group">
+                                <div
                                     onClick={() => toggleCard(index)}
-                                    className={`flex flex-wrap gap-2 sm:gap-2 justify-between items-start md:gap-4 ${index !== 0 ? 'cursor-pointer' : ''} ${isExpanded ? 'mb-3 md:mb-4' : 'mb-0'}`}
+                                    className={`flex flex-wrap gap-2 justify-between items-start ${index !== 0 ? 'cursor-pointer' : ''} ${isExpanded ? 'mb-4' : 'mb-0'}`}
                                 >
-                                    <div className="flex gap-1.5 sm:gap-2 items-start md:gap-3 flex-1 min-w-0 overflow-hidden">
-                                        {/* Dot inside card */}
-                                        <div className={`flex justify-center items-center w-2.5 h-2.5 md:w-3 md:h-3 mt-1 md:mt-1.5 rounded-full transition-all duration-300 flex-shrink-0 ${
-                                            exp.current ? 'bg-green-500 shadow-lg shadow-green-500/50' : 'bg-purple-600 shadow-lg shadow-purple-600/50'
-                                        }`}>
-                                            {exp.current && (
-                                                <div className="absolute w-2.5 h-2.5 md:w-3 md:h-3 bg-green-500 rounded-full opacity-75 animate-ping"></div>
-                                            )}
+                                    <div className="flex gap-2.5 items-start flex-1 min-w-0">
+                                        <div className={`w-2 h-2 mt-1.5 rounded-full flex-shrink-0 ${exp.current ? 'bg-green-400 shadow-sm shadow-green-400/50' : 'bg-white/20'}`}>
+                                            {exp.current && <div className="absolute w-2 h-2 bg-green-400 rounded-full opacity-60 animate-ping"></div>}
                                         </div>
-                                        <div className="overflow-hidden flex-1 min-w-0">
-                                            <h3 className='text-base font-bold leading-tight text-white break-words transition-colors duration-300 sm:text-lg md:text-xl group-hover:text-purple-400'>
-                                                {exp.title}
-                                            </h3>
-                                            <p className='mt-0.5 text-xs sm:text-sm font-semibold leading-tight text-purple-400 md:text-base break-words'>{exp.company}</p>
+                                        <div className="min-w-0 flex-1">
+                                            <h3 className='text-sm font-semibold text-white group-hover:text-red-400 transition-colors duration-150'>{exp.title}</h3>
+                                            <p className='text-xs text-red-400/80 mt-0.5'>{exp.company}</p>
                                         </div>
                                     </div>
-                                    <div className="flex gap-1.5 sm:gap-2 items-center">
-                                        <span className={`inline-block px-2 sm:px-2.5 md:px-3 py-0.5 md:py-1 text-[9px] sm:text-[10px] md:text-xs font-medium rounded-full flex-shrink-0 whitespace-nowrap ${
-                                            exp.current 
-                                                ? 'bg-green-500/20 text-green-400 ring-1 ring-green-500/30' 
-                                                : 'bg-gray-500/20 text-gray-400 ring-1 ring-gray-500/30'
+                                    <div className="flex gap-2 items-center">
+                                        <span className={`text-[10px] px-2 py-0.5 rounded border font-medium whitespace-nowrap ${
+                                            exp.current
+                                                ? 'bg-green-500/10 text-green-400 border-green-500/20'
+                                                : 'bg-white/[0.04] text-white/30 border-white/[0.08]'
                                         }`}>
                                             {getTranslatedType(exp.type)}
                                         </span>
                                         {index !== 0 && (
-                                            <button 
-                                                className="p-0 text-white bg-transparent border-none transition-all duration-300 outline-none hover:text-purple-400 hover:scale-125"
-                                                aria-label={isExpanded ? 'Collapse' : 'Expand'}
-                                            >
-                                                {isExpanded ? <MdExpandLess className="text-xl sm:text-2xl md:text-3xl" /> : <MdExpandMore className="text-xl sm:text-2xl md:text-3xl" />}
+                                            <button className="p-0 text-white/30 bg-transparent border-none outline-none hover:text-white/70 transition-colors">
+                                                {isExpanded ? <MdExpandLess className="text-lg" /> : <MdExpandMore className="text-lg" />}
                                             </button>
                                         )}
                                     </div>
                                 </div>
 
-                                {/* Quick Info - Visible when collapsed */}
                                 {!isExpanded && (
-                                    <div className="flex flex-wrap gap-2 mt-2 pt-2 text-[9px] sm:text-[10px] text-gray-400 md:text-xs overflow-hidden border-t border-gray-700/50">
-                                        <div className="flex flex-shrink-0 gap-1 items-center">
-                                            <MdDateRange className='flex-shrink-0 text-xs text-purple-400'/>
-                                            <span className="whitespace-nowrap">{exp.period}</span>
+                                    <div className="flex flex-wrap gap-3 mt-3 pt-3 text-[10px] text-white/30 border-t border-white/[0.06]">
+                                        <div className="flex gap-1 items-center">
+                                            <MdDateRange className='text-red-400/60'/>
+                                            <span>{exp.period}</span>
                                         </div>
-                                        <span className="flex-shrink-0 text-gray-600">•</span>
-                                        <div className="flex flex-1 gap-1 items-center min-w-0">
-                                            <MdLocationOn className='flex-shrink-0 text-xs text-purple-400'/>
-                                            <span className="truncate">{exp.location}</span>
+                                        <span className="text-white/10">•</span>
+                                        <div className="flex gap-1 items-center">
+                                            <MdLocationOn className='text-red-400/60'/>
+                                            <span>{exp.location}</span>
                                         </div>
                                     </div>
                                 )}
 
-                                {/* Expandable Content */}
-                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? 'mt-3 opacity-100 max-h-[1000px]' : 'mt-0 max-h-0 opacity-0'}`}>
-                                    {/* Description */}
-                                    <div className="mb-3 md:mb-4 p-2.5 sm:p-3 bg-black/20 rounded-lg border-l-2 border-purple-500">
-                                        <p className='text-xs leading-relaxed text-gray-300 break-words sm:text-sm md:text-base'>
-                                            {exp.description}
-                                        </p>
+                                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <div className="mt-3 pl-3 border-l border-red-500/30">
+                                        <p className='text-xs text-white/50 leading-relaxed'>{exp.description}</p>
                                     </div>
 
-                                    {/* Responsibilities */}
-                                    <div className="mb-3 md:mb-4">
-                                        <h4 className="mb-2 text-[10px] sm:text-xs font-bold text-purple-400 uppercase tracking-wide md:text-sm flex items-center gap-2">
-                                            <div className="w-1 h-4 bg-purple-500 rounded-full"></div>
+                                    <div className="mt-4">
+                                        <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.15em] mb-2">
                                             {t("experience.responsibilities")}
-                                        </h4>
-                                        <div className="grid grid-cols-1 gap-2 md:gap-2.5 md:grid-cols-2">
+                                        </p>
+                                        <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2">
                                             {exp.responsibilities.map((resp, idx) => (
-                                                <div key={idx} className="flex gap-2 items-start text-[10px] sm:text-xs text-gray-300 md:text-sm overflow-hidden p-2 rounded bg-black/10 hover:bg-black/20 transition-colors">
-                                                    <div className="w-1.5 h-1.5 md:w-2 md:h-2 mt-1 md:mt-1.5 bg-purple-500 rounded-full flex-shrink-0"></div>
-                                                    <span className="flex-1 leading-relaxed break-words">{resp}</span>
+                                                <div key={idx} className="flex gap-2 items-center text-xs text-white/50 figma-frame px-3 py-2">
+                                                    <div className="w-1 h-1 bg-red-500/60 rounded-full flex-shrink-0"></div>
+                                                    {resp}
                                                 </div>
                                             ))}
                                         </div>
                                     </div>
 
-                                    {/* Footer with Date and Location */}
-                                    <div className="flex flex-wrap gap-3 pt-3 text-[10px] sm:text-xs border-t border-gray-700/50 md:gap-4 md:pt-4 md:text-sm">
-                                        <div className="flex gap-1.5 items-center text-gray-400 md:gap-2 flex-shrink-0">
-                                            <div className="p-1 rounded bg-purple-500/10">
-                                                <MdDateRange className='flex-shrink-0 text-sm text-purple-400 md:text-base'/>
-                                            </div>
-                                            <span className="font-medium whitespace-nowrap">{exp.period}</span>
+                                    <div className="flex flex-wrap gap-4 mt-4 pt-3 text-[10px] text-white/30 border-t border-white/[0.06]">
+                                        <div className="flex gap-1.5 items-center">
+                                            <MdDateRange className='text-red-400/60'/>
+                                            <span>{exp.period}</span>
                                         </div>
-                                        <div className="flex gap-1.5 items-center min-w-0 text-gray-400 md:gap-2 flex-1">
-                                            <div className="p-1 rounded bg-purple-500/10">
-                                                <MdLocationOn className='flex-shrink-0 text-sm text-purple-400 md:text-base'/>
-                                            </div>
-                                            <span className="font-medium truncate">{exp.location}</span>
+                                        <div className="flex gap-1.5 items-center">
+                                            <MdLocationOn className='text-red-400/60'/>
+                                            <span>{exp.location}</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         )
                     })}
                 </div>
@@ -218,4 +166,3 @@ const Experience = () => {
 }
 
 export default Experience
-

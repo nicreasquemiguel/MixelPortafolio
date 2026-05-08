@@ -15,7 +15,7 @@ const LangModal = ({open = true, setOpen}) => {
     <div className="text-center w-56 z-50">
 
       <div className="mx-auto my-4 w-48">
-        <h3 className="text-lg font-black text-gray-800">English / Español?</h3>
+        <h3 className="text-lg font-black text-white">English / Español?</h3>
         <p className="text-sm text-gray-500">
           Choose your preffered language...<br/>
         </p>
@@ -23,14 +23,14 @@ const LangModal = ({open = true, setOpen}) => {
       </div>
       <div className="flex gap-4">
         <button 
-            className="btn bg-black/30 hover:bg-black/50 hover:text-white rounded-xl text-black font-bold h-[45px] border-none w-full"
+            className="btn bg-slate-900/40 hover:bg-slate-900/70 hover:text-white rounded-xl text-white font-bold h-[45px] border-none w-full"
             onClick={()=>{
                 handleChangeLanguage("en")
                 setOpen(false)    
             }}>
             English</button>
         <button
-          className="bg-black/30 hover:bg-black/50 hover:text-white rounded-xl text-black font-bold h-[45px] border-none w-full"
+          className="bg-slate-900/40 hover:bg-slate-900/70 hover:text-white rounded-xl text-white font-bold h-[45px] border-none w-full"
           onClick={()=>{
             handleChangeLanguage("es")
             setOpen(false)    

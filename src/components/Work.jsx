@@ -71,6 +71,24 @@ const Work = () => {
                         </div>
                     </div>
 
+                    <div className="figma-frame flex flex-col overflow-hidden group">
+                        <div className="overflow-hidden border-b border-white/[0.06]">
+                            <div className="w-full h-44 bg-gradient-to-br from-[#c8b89a]/20 to-[#8a7a5a]/10 flex items-center justify-center">
+                                <span className="text-xl font-light tracking-widest text-[#c8b89a]/60 uppercase">AriBella</span>
+                            </div>
+                        </div>
+                        <div className="flex flex-col flex-grow p-5">
+                            <p className="text-[10px] text-white/30 uppercase tracking-[0.15em] mb-2">Frontend</p>
+                            <h2 className="text-sm font-semibold text-white group-hover:text-red-400 transition-colors duration-150">AribellaMedSpa</h2>
+                            <p className="text-xs text-white/40 mt-1 mb-4">Medical Spa Website • React • Tailwind CSS</p>
+                            <div className="flex gap-2 mt-auto">
+                                <a href='https://aribellamedspa.com/' target="_blank" rel="noopener noreferrer" className="flex-1 px-3 py-1.5 text-xs text-center text-white no-underline bg-red-500/20 hover:bg-red-500/30 border border-red-500/20 hover:border-red-500/40 rounded transition-all duration-150">
+                                    {t("buttons.viewlive")}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="figma-frame flex flex-col overflow-hidden group border-dashed">
                         <div className="flex items-center justify-center h-44 border-b border-white/[0.06] bg-white/[0.02] relative">
                             <img src={trofi} alt="Trofi App" className="h-28 w-auto object-contain opacity-20 group-hover:opacity-30 transition-opacity duration-300 invert" />

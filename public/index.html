@@ -19,10 +19,11 @@
     <title>Mixel's Portafolio</title>
 
     <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.io/js/pa-Qb8LfQlEJVIemVL7KfKGc.js"></script>
+    <script async src="https://plausible.io/js/pa-Qb8LfQlEJVIemVL7KfKGc.js" onload="console.log('Plausible script loaded')" onerror="console.error('Plausible script failed to load')"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
       plausible.init()
+      console.log('Plausible init called');
     </script>
   </head>
   <body>

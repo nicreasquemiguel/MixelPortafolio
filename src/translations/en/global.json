@@ -10,7 +10,8 @@
         "download":"Download CV",
         "hello":"Hi!",
         "iam":"I'm ",
-        "working":"and I'm working with..."
+        "working":"and I'm working with...",
+        "cvToast":"Done! Your CV PDF was just generated dynamically in English from this site's live data."
     },
     "about":{
         "title": "About ",

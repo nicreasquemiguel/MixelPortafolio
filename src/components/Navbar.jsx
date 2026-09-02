@@ -1,12 +1,14 @@
 import {useState , useRef, useEffect } from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import LangModal from './LangModal'
+import MixelTerminal from './MixelTerminal'
 import { US, MX } from 'country-flag-icons/react/3x2'
 import { useTranslation } from 'react-i18next'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
     const [open, setOpen] = useState(true)
+    const [terminal, setTerminal] = useState(false)
 
     const ref = useRef()
     const {t, i18n} = useTranslation("global")
@@ -27,6 +29,7 @@ const Navbar = () => {
   return (
     <>
       <LangModal open={open} setOpen={callbackOpen}/>
+      {terminal && <MixelTerminal onClose={() => setTerminal(false)} />}
 
       {/* Backdrop */}
       {nav && (
@@ -44,7 +47,7 @@ const Navbar = () => {
           ${nav ? 'translate-x-0' : '-translate-x-full'}`}
       >
           <div className="flex items-center justify-between px-5 h-14 border-b border-white/[0.06]">
-            <h1 className='text-base font-bold tracking-wider primary-color'>MIXEL</h1>
+            <h1 onClick={() => setTerminal(true)} className='text-base font-bold tracking-wider cursor-pointer primary-color'>MIXEL</h1>
             <button onClick={closeNav} className="text-white/50 hover:text-white bg-transparent border-none cursor-pointer">
               <AiOutlineClose size={18}/>
             </button>
@@ -68,7 +71,7 @@ const Navbar = () => {
 
       {/* Top navbar */}
       <div className='fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-12 px-5 bg-[#1e1e1e]/95 backdrop-blur-md border-b border-white/[0.08]'>
-          <h1 className='text-base font-bold tracking-wider primary-color'>MIXEL</h1>
+          <h1 onClick={() => setTerminal(true)} className='text-base font-bold tracking-wider cursor-pointer primary-color'>MIXEL</h1>
 
           <ul className='hidden list-none gap-1 md:flex items-center'>
               <li><a className='nav-link text-sm px-3 py-1.5 rounded hover:bg-white/[0.06]' href='#home'>{t("nav.home")}</a></li>

@@ -10,7 +10,8 @@
         "download": "Descargar CV",
         "hello": "Hola! ",
         "working": "trabajo lo siguiente...",
-        "iam": "Soy "
+        "iam": "Soy ",
+        "cvToast": "¡Listo! Tu CV en PDF se generó dinámicamente en español a partir de los datos en vivo de este sitio."
     },
     "about": {
         "title": "Sobre ",
@@ -78,7 +79,7 @@
             "Yolo",
             "Nadie Tiene Tiempo",
             "Estaría Bien (Nunca)",
-            "Bloqueante (mentira)",
+            "Bloqueante (mentis)",
             "Algún Día™"
         ],
         "titles": [

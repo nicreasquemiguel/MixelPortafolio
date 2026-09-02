@@ -57,5 +57,51 @@
     "buttons":{
         "viewlive":"View Live",
         "github":"GitHub"
+    },
+    "easterEgg": {
+        "header": "easter egg — dodge the bugs",
+        "instructions": "You found the Konami code. Dodge the bugs, 🐛 survive as long as you can.",
+        "namePlaceholder": "Your name",
+        "start": "Start",
+        "playAgain": "Play again",
+        "caughtYou": "Bug caught you!",
+        "best": "best",
+        "score": "SCORE",
+        "ticketPrompt": "Would you like to create a Jira ticket for this bug?",
+        "createTicket": "🎫 Create ticket",
+        "bugTag": "bug",
+        "playerFallback": "Player",
+        "controlsHint": "Arrow keys to move · Esc to close",
+        "priorities": [
+            "Whenever",
+            "Meh",
+            "Yolo",
+            "Ain't Nobody Got Time",
+            "Nice to Have (Never)",
+            "Blocker (jk)",
+            "Someday™"
+        ],
+        "titles": [
+            "Bug caught the player",
+            "Player collided with undocumented feature",
+            "Cannot reproduce... oh wait, yes I can",
+            "Works on my machine",
+            "It's not a bug, it's a feature",
+            "Player.exe has stopped responding",
+            "Null reference: player_dignity",
+            "Merge conflict between player and bug",
+            "404: player survival not found",
+            "Segmentation fault (core dumped)",
+            "Bug achieved game over via unauthorized means",
+            "Player got rekt in production",
+            "Uncaught exception: YouDied",
+            "Race condition: bug won",
+            "Player state corrupted by bug.exe",
+            "Off-by-one error caused instant death",
+            "Memory leak: player's will to live",
+            "Stack overflow: too many bugs",
+            "Infinite loop of regret",
+            "TODO: fix this before the demo"
+        ]
     }
 }

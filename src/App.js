@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import GitHubActivity from './components/GitHubActivity';
 import ContactMe from './components/ContactMe';
 import Footer from './components/Footer';
+import EasterEgg from './components/EasterEgg';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 
       <ContactMe/>
       <Footer/>
+      <EasterEgg/>
     </div>
   );
 }

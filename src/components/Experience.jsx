@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MdDateRange, MdLocationOn, MdExpandMore, MdExpandLess } from "react-icons/md";
+import { MdDateRange, MdLocationOn, MdExpandMore, MdWork } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
 
 const Experience = () => {
@@ -25,13 +25,19 @@ const Experience = () => {
 
     const experiences = [
         {
-            title: "Backend Developer",
+            title: "Backend Development / Team Lead (Python / Django / FastAPI)",
             company: "Centra Med",
             type: "Full Time",
             period: "Mar 2025 - Present",
             location: "Guadalajara, Jalisco, México",
-            description: "Backend Development for an administrative medical management web app with FHIR/HL7/HIPAA standards.",
-            responsibilities: ["Django Microservices", "FastAPI Gateway", "Chatbot with AI and call Integration"],
+            description: "Leading backend development for an administrative medical management web application built to FHIR, HL7, and HIPAA standards.",
+            responsibilities: [
+                "Architected and maintained Django microservices powering core business logic",
+                "Designed and implemented a FastAPI gateway to unify service communication",
+                "Led AWS infrastructure integration for scalable, secure deployments",
+                "Directed integration of an AI-powered chatbot with call handling capabilities",
+                "Managed and mentored the development team, overseeing sprint planning and code quality"
+            ],
             current: true
         },
         {
@@ -82,21 +88,21 @@ const Experience = () => {
                     {experiences.map((exp, index) => {
                         const isExpanded = expandedCards.includes(index)
                         return (
-                            <div key={index} className="figma-frame p-4 md:p-5 group">
+                            <div key={index} className={`figma-frame p-4 md:p-5 group ${exp.current ? 'border-l-2 border-l-red-500/40' : ''}`}>
                                 <div
                                     onClick={() => toggleCard(index)}
-                                    className={`flex flex-wrap gap-2 justify-between items-start ${index !== 0 ? 'cursor-pointer' : ''} ${isExpanded ? 'mb-4' : 'mb-0'}`}
+                                    className={`flex flex-wrap gap-3 justify-between items-start ${index !== 0 ? 'cursor-pointer' : ''} ${isExpanded ? 'mb-4' : 'mb-0'}`}
                                 >
-                                    <div className="flex gap-2.5 items-start flex-1 min-w-0">
-                                        <div className={`w-2 h-2 mt-1.5 rounded-full flex-shrink-0 ${exp.current ? 'bg-green-400 shadow-sm shadow-green-400/50' : 'bg-white/20'}`}>
-                                            {exp.current && <div className="absolute w-2 h-2 bg-green-400 rounded-full opacity-60 animate-ping"></div>}
+                                    <div className="flex gap-3 items-start flex-1 min-w-0">
+                                        <div className={`flex items-center justify-center w-8 h-8 flex-shrink-0 ${exp.current ? 'text-green-400' : 'text-white/40'}`}>
+                                            <MdWork className="text-lg" />
                                         </div>
                                         <div className="min-w-0 flex-1">
-                                            <h3 className='text-sm font-semibold text-white group-hover:text-red-400 transition-colors duration-150'>{exp.title}</h3>
+                                            <h3 className='text-sm font-semibold leading-snug text-white group-hover:text-red-400 transition-colors duration-150'>{exp.title}</h3>
                                             <p className='text-xs text-red-400/80 mt-0.5'>{exp.company}</p>
                                         </div>
                                     </div>
-                                    <div className="flex gap-2 items-center">
+                                    <div className="flex gap-2 items-center flex-shrink-0">
                                         <span className={`text-[10px] px-2 py-0.5 rounded border font-medium whitespace-nowrap ${
                                             exp.current
                                                 ? 'bg-green-500/10 text-green-400 border-green-500/20'
@@ -106,7 +112,7 @@ const Experience = () => {
                                         </span>
                                         {index !== 0 && (
                                             <button className="p-0 text-white/30 bg-transparent border-none outline-none hover:text-white/70 transition-colors">
-                                                {isExpanded ? <MdExpandLess className="text-lg" /> : <MdExpandMore className="text-lg" />}
+                                                <MdExpandMore className={`text-lg transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
                                             </button>
                                         )}
                                     </div>
@@ -135,10 +141,10 @@ const Experience = () => {
                                         <p className="text-[10px] font-semibold text-white/30 uppercase tracking-[0.15em] mb-2">
                                             {t("experience.responsibilities")}
                                         </p>
-                                        <div className="grid grid-cols-1 gap-1.5 md:grid-cols-2">
+                                        <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
                                             {exp.responsibilities.map((resp, idx) => (
-                                                <div key={idx} className="flex gap-2 items-center text-xs text-white/50 figma-frame px-3 py-2">
-                                                    <div className="w-1 h-1 bg-red-500/60 rounded-full flex-shrink-0"></div>
+                                                <div key={idx} className="flex gap-2 items-start text-xs leading-relaxed text-white/50">
+                                                    <div className="w-1 h-1 mt-1.5 bg-red-500/60 rounded-full flex-shrink-0"></div>
                                                     {resp}
                                                 </div>
                                             ))}

@@ -57,5 +57,51 @@
     "buttons": {
         "viewlive": "Ver Sitio",
         "github": "GitHub"
+    },
+    "easterEgg": {
+        "header": "huevo de pascua — esquiva los bugs",
+        "instructions": "Encontraste el código Konami. Esquiva los bugs, 🐛 sobrevive el mayor tiempo posible.",
+        "namePlaceholder": "Tu nombre",
+        "start": "Empezar",
+        "playAgain": "Jugar de nuevo",
+        "caughtYou": "¡Un bug te atrapó!",
+        "best": "mejor",
+        "score": "PUNTOS",
+        "ticketPrompt": "¿Quieres crear un ticket de Jira para este bug?",
+        "createTicket": "🎫 Crear ticket",
+        "bugTag": "bug",
+        "playerFallback": "Jugador",
+        "controlsHint": "Flechas para moverte · Esc para cerrar",
+        "priorities": [
+            "Cuando sea",
+            "Meh",
+            "Yolo",
+            "Nadie Tiene Tiempo",
+            "Estaría Bien (Nunca)",
+            "Bloqueante (mentira)",
+            "Algún Día™"
+        ],
+        "titles": [
+            "El bug atrapó al jugador",
+            "El jugador chocó con una función no documentada",
+            "No se puede reproducir... ah espera, sí puedo",
+            "Funciona en mi máquina",
+            "No es un bug, es una función",
+            "Jugador.exe dejó de responder",
+            "Referencia nula: dignidad_del_jugador",
+            "Conflicto de fusión entre el jugador y el bug",
+            "404: supervivencia del jugador no encontrada",
+            "Fallo de segmentación (core dumped)",
+            "El bug logró el game over por medios no autorizados",
+            "El jugador fue destruido en producción",
+            "Excepción no capturada: Moriste",
+            "Condición de carrera: ganó el bug",
+            "Estado del jugador corrompido por bug.exe",
+            "Un error de desfase causó muerte instantánea",
+            "Fuga de memoria: las ganas de vivir del jugador",
+            "Desbordamiento de pila: demasiados bugs",
+            "Bucle infinito de arrepentimiento",
+            "TODO: arreglar esto antes de la demo"
+        ]
     }
 }
